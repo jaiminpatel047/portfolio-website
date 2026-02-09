@@ -495,7 +495,7 @@
             border-color: var(--primary);
         }
 
-        .project-image {
+        /* .project-image {
             width: 100%;
             height: 250px;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -515,7 +515,40 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.2);
+        } */
+
+        .project-image{
+            width: 100%;
+            height: 250px;
+
+            /* Replace gradient with gif */
+            background-image: url("images/mygif.gif");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
         }
+
+            /* dark overlay (keep if you want) */
+            .project-image::after{
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.2);
+            pointer-events: none;
+            }
+
+            /* make emoji/text above overlay */
+            .project-image > *{
+            position: relative;
+            z-index: 1;
+            }
 
         .project-content {
             padding: 2rem;
@@ -540,6 +573,12 @@
             color: var(--text-secondary);
             line-height: 1.7;
             margin-bottom: 1.5rem;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 2;      /* show only 2 lines */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .project-tech {
