@@ -71,76 +71,8 @@
 
         // CV Download
         document.getElementById('downloadCV').addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const cvContent = `YOUR NAME
-.NET Developer & Software Architect
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-CONTACT INFORMATION
-→ Email: your.email@example.com
-→ Phone: +1 (123) 456-7890
-→ Location: Your City, Country
-→ GitHub: github.com/yourusername
-→ LinkedIn: linkedin.com/in/yourusername
-→ Portfolio: yourwebsite.com
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-PROFESSIONAL SUMMARY
-
-Passionate .NET Developer with 5+ years of experience building enterprise-level 
-applications. Expert in C#, ASP.NET Core, and modern web technologies. Proven track 
-record of delivering scalable, maintainable solutions using clean architecture 
-principles and SOLID design patterns.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-TECHNICAL SKILLS
-
-Backend: C#, .NET Core 8, ASP.NET Core MVC, Web API, Entity Framework, LINQ
-Frontend: React, Angular, Blazor, TypeScript, JavaScript, HTML5/CSS3
-Database: SQL Server, PostgreSQL, MongoDB, Redis
-Cloud & DevOps: Azure, AWS, Docker, Kubernetes, CI/CD
-Architecture: Microservices, Clean Architecture, SOLID, Design Patterns
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-PROFESSIONAL EXPERIENCE
-
-Senior .NET Developer | Tech Company Inc. | 2022 - Present
-→ Architected microservices-based e-commerce platform (100K+ daily transactions)
-→ Led .NET Framework to .NET 8 migration (60% performance improvement)
-→ Mentored 5 junior developers with code reviews and training
-→ Reduced API response time by 70% through optimization
-
-.NET Developer | Digital Solutions Ltd. | 2020 - 2021
-→ Developed RESTful APIs (500K+ daily requests, 99.9% uptime)
-→ Built HIPAA-compliant healthcare management system
-→ Implemented OAuth 2.0 authentication with ASP.NET Core Identity
-→ Achieved 85% code coverage with comprehensive testing
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-EDUCATION
-
-Bachelor of Science in Computer Science | University Name | 2019
-
-CERTIFICATIONS
-→ Microsoft Certified: Azure Developer Associate
-→ Microsoft Certified: .NET Developer
-→ Azure Solutions Architect Expert`;
-
-            const blob = new Blob([cvContent], { type: 'text/plain;charset=utf-8' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'YourName_DotNet_Developer_CV.txt';
-            document.body.appendChild(a);
-            a.click();
-            window.URL.revokeObjectURL(url);
-            document.body.removeChild(a);
+          e.preventDefault();
+          window.open('/pdf/resume.pdf', '_blank'); // or location.href = '/pdf/resume.pdf'
         });
 
         // Scroll animations

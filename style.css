@@ -517,16 +517,34 @@
             background: rgba(0, 0, 0, 0.2);
         } */
 
+        .ecommerce-platform{
+             background-image: url("./images/bluky.gif");
+        }
+        .expense-tracker{
+             background-image: url("./images/expense-tracker.gif");
+        }
+        .automotive-workshop-management{
+             background-image: url("./images/automotive-workshop-management.gif");
+        }
+        .nz-walks-api{
+             background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        .google-translate{
+             background-image: url("./images/google-translate-clone.gif");
+        }
+        .note-taking-app{
+             background-image: url("./images/notetakinapp.gif");
+        }
+
         .project-image{
             width: 100%;
             height: 250px;
 
             /* Replace gradient with gif */
-            background-image: url("images/mygif.gif");
+            
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-
             display: flex;
             align-items: center;
             justify-content: center;
